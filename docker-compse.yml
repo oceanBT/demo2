@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  web:
+    image: php:7.2-apache
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 81:80
+    extra_hosts:
+      - "demo.de:192.168.56.101"
+    environment:
+      EXAMLE: https://demo-value.de
